@@ -11,6 +11,7 @@ Welcome to eForms's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   ./Installation
    ./eForms
    ./about
 

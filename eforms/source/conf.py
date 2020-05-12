@@ -54,15 +54,26 @@ html_theme = 'alabaster'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['./_static']
-#html_logo = '_images/logipad-aero-logo-black.png'
+html_logo = './_images/logipad-aero-logo-black.png'
 
-
+html_sidebars = {
+    '**': [
+        
+        'navigation.html',
+       
+    ]
+}
 
 ## Customized latex options
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_engine = 'pdflatex'
 latex_toplevel_sectioning = 'chapter'
+latex_additional_files = [
+                            './_images/logipad-aero-logo-black.png',
+                            './_images/DD-logo.png',
+                            './_images/DD-stripes.png'
+                        ]
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -87,8 +98,11 @@ latex_elements = {
         \setcounter{secnumdepth}{3}
         %
         %%%% Table of content upto 2=subsection, 3=subsubsection
-        \setcounter{tocdepth}{2}
 
+        \usepackage[default]{sourcesanspro}
+        \usepackage[T1]{fontenc}
+        \setcounter{tocdepth}{2}
+        
         \usepackage{amsmath,amsfonts,amssymb,amsthm}
         \usepackage{graphicx}
         \usepackage[export]{adjustbox}
@@ -172,12 +186,12 @@ latex_elements = {
             \vspace*{0mm} %%% * is used to give space from top
             \begin{figure}[!h]
                 \vspace*{-20mm}
-                \includegraphics[right]{/Users/dl/develop/lp-docs/eforms/source/_images/DD-logo.png}
+                \includegraphics[right]{DD-logo.png}
             \end{figure}
             \vspace{30mm} %%% * is used to give space from top
             \begin{figure}[!h]
                 \centering
-                \includegraphics[scale=1.0]{/Users/dl/develop/lp-docs/eforms/source/_images/logipad-aero-logo-black.png}
+                \includegraphics[scale=1.0]{logipad-aero-logo-black.png}
             \end{figure}
 
             \vspace{10mm} 
@@ -191,10 +205,10 @@ latex_elements = {
             \vspace*{0mm}
             \small  Last updated : \MonthYearFormat\today
             
-            \vspace{70mm}
+            \vspace{60mm}
             \begin{figure}[!h]
                 \hspace*{-20mm}
-                \includegraphics[scale=1.0,left]{/Users/dl/develop/lp-docs/eforms/source/_images/DD-stripes.png}
+                \includegraphics[scale=1.0,left]{DD-stripes.png}
             \end{figure}
             %% \vfill adds at the bottom
             \vfill

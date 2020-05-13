@@ -49,7 +49,9 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'alabaster'
+html_theme_options = {
 
+}
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
@@ -99,6 +101,8 @@ latex_elements = {
         %
         %%%% Table of content upto 2=subsection, 3=subsubsection
 
+        \definecolor{DDRed}{rgb}{0.443,0.160,0.282}
+        \definecolor{DDDarkRed}{rgb}{0.176,0.113,0.152} %%% {45,29,39}
         \usepackage[default]{sourcesanspro}
         \usepackage[T1]{fontenc}
         \setcounter{tocdepth}{2}
@@ -117,12 +121,19 @@ latex_elements = {
         \usepackage{lipsum}
 
         \usepackage{footnotebackref} %%link at the footnote to go to the place of footnote in the text
+        \usepackage{titlesec}
+
+        \usepackage{xcolor}
+        
+        \usepackage{sectsty}
+        \chapterfont{\color{DDDarkRed}}  % sets colour of chapters
+        \sectionfont{\color{DDRed}}  % sets colour of sections
 
         %% spacing between line
         \usepackage{setspace}
-        %%%%\onehalfspacing
+        \onehalfspacing
         %%%%\doublespacing
-        \singlespacing
+        %%%%\singlespacing
 
 
         %%%%%%%%%%% datetime
@@ -147,7 +158,7 @@ latex_elements = {
         %\fancyhead[LE]{\small \nouppercase{\leftmark}}
 
         %% for oneside: change footer at right side. If you want to use Left and right then use same as header defined above.
-        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny Dirk Leese} }{\href{http://www.logipad.aerol}{\tiny visit Logipad ebsite }}}
+        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny Dirk Leese} }{\href{http://www.logipad.aerol}{\tiny visit Logipad website }}}
 
         %%% Alternating Footer for two side
         %\fancyfoot[RO, RE]{\scriptsize Dirk Leese (dirk.leese@dextradata.com)}
@@ -195,7 +206,7 @@ latex_elements = {
             \end{figure}
 
             \vspace{10mm} 
-            \textbf{\Huge {eForms User Guide}}
+            \textbf{\Huge {Logipad Docs}}
 
             \vspace{30mm}
             \Large \textbf{{Dirk Leese}}
@@ -205,17 +216,17 @@ latex_elements = {
             \vspace*{0mm}
             \small  Last updated : \MonthYearFormat\today
             
-            \vspace{60mm}
+            \vspace{50mm}
             \begin{figure}[!h]
                 \hspace*{-20mm}
                 \includegraphics[scale=1.0,left]{DD-stripes.png}
             \end{figure}
             %% \vfill adds at the bottom
             \vfill
-            \small \textit{More information are available at }{\href{http://www.logipad.aero}{Logpad}}
+            \small \textit{More information are available at }{\href{http://www.logipad.aero}{Logipad}}
         \end{titlepage}
 
-        \clearpage
+       %% \clearpage
         \pagenumbering{roman}
         \tableofcontents
         \listoffigures

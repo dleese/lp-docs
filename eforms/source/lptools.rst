@@ -19,4 +19,4 @@ Documents and photos can also be attached and forwarded via an appropriate eForm
 
 eForm Generator
 ---------------
-The Logipad eForms Module allows you to create your own electronic forms with our intuitive eForm drag and drop editor or use existing templates. The video shows how easy and intuitive it is to create eForms yourself with Logipad.
+The Logipad eForms Module allows you to create your own electronic forms with our intuitive eForm drag and drop editor or use existing templates.

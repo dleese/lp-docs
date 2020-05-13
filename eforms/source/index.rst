@@ -14,7 +14,11 @@ Some Contents
 
    lpclientinstallation
    lptools
+   snippets
+   eFormcreationH
    about
+   
+  
 
 Indices and tables
 ==================

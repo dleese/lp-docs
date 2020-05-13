@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'LP-Docs'
-copyright = '2020, Dirk Leese'
+copyright = '2020, DextraData GmbH'
 author = 'Dirk Leese'
 
 # The full version, including alpha/beta/rc tags

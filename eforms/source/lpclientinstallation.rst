@@ -1,8 +1,8 @@
 
 .. _Installation:
 
-Installation
-=================
+Logipad Client Installation
+===========================
 
 iOS
 ---

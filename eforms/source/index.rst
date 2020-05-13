@@ -6,14 +6,15 @@
 ==================================
 Logipad Docs
 ==================================
-..
+Some Contents
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   ./Installation
-   ./eForms
-   ./about
+   lpclientinstallation
+   lptools
+   about
 
 Indices and tables
 ==================

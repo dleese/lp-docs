@@ -1,6 +1,9 @@
 Logipad Tools
 =============
 
+eForms
+------
+
 Electronic forms have become more and more important as digitization and automatic data processing has progressed. 
 eForms are not limited to simple text input or selection fields.
 
@@ -12,11 +15,12 @@ All entered data is stored on the device for offline use. Once a Wi-Fi or mobile
 Even workflows and notifications can be triggered to inform the relevant users/roles when, when eForms have been stored or have arrived on the server. 
 Documents and photos can also be attached and forwarded via an appropriate eForm.
 
-.. figure::  ./_images/Logipad-eForms-web.png
+.. figure::  ../../_images/Logipad-eForms-web.png
    :scale: 40
 
    The eForm process
 
-eForm Generator
----------------
+eFormGenerator
+--------------
+
 The Logipad eForms Module allows you to create your own electronic forms with our intuitive eForm drag and drop editor or use existing templates.

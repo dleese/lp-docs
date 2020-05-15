@@ -6,16 +6,23 @@
 ==================================
 Logipad Docs
 ==================================
-Some Contents
+
+place some abstract description here...
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   lpclientinstallation
-   lptools
-   snippets
-   eFormcreationH
+   _docs/_lpClients/lpclientinstallation
+
+.. toctree::
+   :maxdepth: 2
+   
+   _docs/_eForms/lptools
+
+.. toctree::
+   :maxdepth: 1
+   
    about
    
   

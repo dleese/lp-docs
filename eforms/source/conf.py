@@ -74,10 +74,15 @@ html_sidebars = {
 latex_engine = 'pdflatex'
 latex_toplevel_sectioning = 'chapter'
 latex_additional_files = [
+                            './DDSTyle.sty',
                             './_images/logipad-aero-logo-black.png',
                             './_images/DD-logo.png',
                             './_images/DD-stripes.png'
                         ]
+
+f = open('./DDTitle.tex','r+')
+DDTITLE = f.read();
+
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -92,151 +97,15 @@ latex_elements = {
     # The font size ('10pt', '11pt' or '12pt').
     #
     'pointsize': '12pt',
-
+    
     # Additional stuff for the LaTeX preamble.
     #
     'preamble': r'''
-        %%%%%%%%%%%%%%%%%%%% DD Settings %%%%%%%%%%%%%%%%%%
-        %%%add number to subsubsection 2=subsection, 3=subsubsection
-        %%% below subsubsection is not good idea.
-        \setcounter{secnumdepth}{3}
-        %
-        %%%% Table of content upto 2=subsection, 3=subsubsection
-
-        \definecolor{DDRed}{rgb}{0.443,0.160,0.282}
-        \definecolor{DDDarkRed}{rgb}{0.176,0.113,0.152} %%% {45,29,39}
-        \usepackage[default]{sourcesanspro}
-        \usepackage[T1]{fontenc}
-        \setcounter{tocdepth}{2}
-        
-        \usepackage{amsmath,amsfonts,amssymb,amsthm}
-        \usepackage{graphicx}
-        \usepackage[export]{adjustbox}
-
-        %%% reduce spaces for Table of contents, figures and tables
-        %%% it is used "\addtocontents{toc}{\vskip -1.2cm}" etc. in the document
-        \usepackage[notlot,nottoc,notlof]{}
-
-        \usepackage{color}
-        \usepackage{transparent}
-        \usepackage{eso-pic}
-        \usepackage{lipsum}
-
-        \usepackage{footnotebackref} %%link at the footnote to go to the place of footnote in the text
-        \usepackage{titlesec}
-
-        \usepackage{xcolor}
-        
-        \usepackage{sectsty}
-        \chapterfont{\color{DDDarkRed}}  % sets colour of chapters
-        \sectionfont{\color{DDRed}}  % sets colour of sections
-
-        %% spacing between line
-        \usepackage{setspace}
-        \onehalfspacing
-        %%%%\doublespacing
-        %%%%\singlespacing
-
-
-        %%%%%%%%%%% datetime
-        \usepackage{datetime}
-
-        \newdateformat{MonthYearFormat}{%
-            \monthname[\THEMONTH], \THEYEAR}
-
-
-        %% RO, LE will not work for 'oneside' layout.
-        %% Change oneside to twoside in document class
-        \usepackage{fancyhdr}
-        \pagestyle{fancy}
-        \fancyhf{}
-
-        %%% Alternating Header for oneside
-        \fancyhead[L]{\ifthenelse{\isodd{\value{page}}}{ \small \nouppercase{\leftmark} }{}}
-        \fancyhead[R]{\ifthenelse{\isodd{\value{page}}}{}{ \small \nouppercase{\rightmark} }}
-
-        %%% Alternating Header for two side
-        %\fancyhead[RO]{\small \nouppercase{\rightmark}}
-        %\fancyhead[LE]{\small \nouppercase{\leftmark}}
-
-        %% for oneside: change footer at right side. If you want to use Left and right then use same as header defined above.
-        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny Dirk Leese} }{\href{http://www.logipad.aerol}{\tiny visit Logipad website }}}
-
-        %%% Alternating Footer for two side
-        %\fancyfoot[RO, RE]{\scriptsize Dirk Leese (dirk.leese@dextradata.com)}
-
-        %%% page number
-        \fancyfoot[CO, CE]{\thepage}
-
-        \renewcommand{\headrulewidth}{0.5pt}
-        \renewcommand{\footrulewidth}{0.5pt}
-
-        \RequirePackage{tocbibind} %%% comment this to remove page number for following
-        \addto\captionsenglish{\renewcommand{\contentsname}{Table of contents}}
-        \addto\captionsenglish{\renewcommand{\listfigurename}{List of figures}}
-        \addto\captionsenglish{\renewcommand{\listtablename}{List of tables}}
-        % \addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
-
-
-        %%reduce spacing for itemize
-        \usepackage{enumitem}
-        \setlist{nosep}
-
-        %%%%%%%%%%% Quote Styles at the top of chapter
-        \usepackage{epigraph}
-        \setlength{\epigraphwidth}{0.8\columnwidth}
-        \newcommand{\chapterquote}[2]{\epigraphhead[60]{\epigraph{\textit{#1}}{\textbf {\textit{--#2}}}}}
-        %%%%%%%%%%% Quote for all places except Chapter
-        \newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
+       \usepackage{DDStyle}
     ''',
 
+    'maketitle': DDTITLE,
 
-    'maketitle': r'''
-        \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page 1
-
-        \begin{titlepage}
-            \centering
-            \vspace*{0mm} %%% * is used to give space from top
-            \begin{figure}[!h]
-                \vspace*{-20mm}
-                \includegraphics[right]{DD-logo.png}
-            \end{figure}
-            \vspace{30mm} %%% * is used to give space from top
-            \begin{figure}[!h]
-                \centering
-                \includegraphics[scale=1.0]{logipad-aero-logo-black.png}
-            \end{figure}
-
-            \vspace{10mm} 
-            \textbf{\Huge {Logipad Docs}}
-
-            \vspace{30mm}
-            \Large \textbf{{Dirk Leese}}
-
-            \small Created on : \today
-
-            \vspace*{0mm}
-            \small  Last updated : \MonthYearFormat\today
-            
-            \vspace{50mm}
-            \begin{figure}[!h]
-                \hspace*{-20mm}
-                \includegraphics[scale=1.0,left]{DD-stripes.png}
-            \end{figure}
-            %% \vfill adds at the bottom
-            \vfill
-            \small \textit{More information are available at }{\href{http://www.logipad.aero}{Logipad}}
-        \end{titlepage}
-
-       %% \clearpage
-        \pagenumbering{roman}
-        \tableofcontents
-        \listoffigures
-        \listoftables
-        \clearpage
-        \pagenumbering{arabic}
-
-        ''',
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
@@ -244,9 +113,7 @@ latex_elements = {
         'hmargin={0.7in,0.7in}, vmargin={1in,1in}, \
         verbatimwithframe=true, \
         TitleColor={rgb}{0.443,0.160,0.282}, \
-        HeaderFamily=\\rmfamily\\bfseries, \
         InnerLinkColor={rgb}{0.443,0.160,0.282}, \
         OuterLinkColor={rgb}{0.443,0.160,0.282}',
-
         'tableofcontents':' ',
 }

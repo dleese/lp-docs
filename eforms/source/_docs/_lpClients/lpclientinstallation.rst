@@ -22,7 +22,7 @@ After downloading the application open the Settings application from your iPad a
 Find screenshots below for further Information.
 
 .. figure::  ../../_images/Settings.png
-   :scale: 80
+   :scale: 30
     
    Settings Application: select *Device Management*
 

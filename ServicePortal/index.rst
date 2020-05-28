@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Konventionen zur Inhaltsablagen  
-===============================
+Logipad Service Portal 
+======================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   ./_content/TeamsStruktur
+   ./_content/ServiceRequests
 
 
 Indices and tables

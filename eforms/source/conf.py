@@ -62,7 +62,7 @@ html_logo = './_images/logipad-aero-logo-black.png'
 
 html_sidebars = {
     '**': [
-        
+        'searchbox.html',
         'navigation.html',
        
     ]

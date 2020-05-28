@@ -21,6 +21,11 @@ place some abstract description here...
    _docs/_eForms/lptools
 
 .. toctree::
+   :maxdepth: 2
+   
+   snippets
+
+.. toctree::
    :maxdepth: 1
    
    about

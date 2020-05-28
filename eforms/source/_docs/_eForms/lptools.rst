@@ -16,7 +16,7 @@ Even workflows and notifications can be triggered to inform the relevant users/r
 Documents and photos can also be attached and forwarded via an appropriate eForm.
 
 .. figure::  ../../_images/Logipad-eForms-web.png
-   :scale: 40
+   :scale: 30
 
    The eForm process
 

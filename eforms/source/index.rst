@@ -19,6 +19,7 @@ place some abstract description here...
    :maxdepth: 2
    
    _docs/_eForms/lptools
+   _docs/_eForms/eFormCreation
 
 .. toctree::
    :maxdepth: 2

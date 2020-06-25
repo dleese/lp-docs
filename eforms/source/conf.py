@@ -86,6 +86,7 @@ DDTITLE = f.read();
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
+    'extraclassoptions': 'openany',
     'papersize': 'a4paper',
     'releasename':" ",
     # Sonny, Lenny, Glenn, Conny, Rejne, Bjarne and Bjornstrup

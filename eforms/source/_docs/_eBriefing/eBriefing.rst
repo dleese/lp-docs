@@ -56,7 +56,5 @@ Briefing state can have one of four values:
 
 - *Ready* this initial state is a read-only one. No data can be entered. 
 - *Active* this state allows the user to enter the data.
-- *Finalized* before submitting Briefing packages to the ground, the current active Briefing needs to be finalized. Only the the master 
-user is allowed to send packages to the ground. Depending on a particular configuration, Briefing can only be finalized when all 
-required input fields are filled. A check list of required fields can be found in the subsection Flight Summary of the Flight Plan Section.
+- *Finalized* before submitting Briefing packages to the ground, the current active Briefing needs to be finalized. Only the the master user is allowed to send packages to the ground. Depending on a particular configuration, Briefing can only be finalized when all required input fields are filled. A check list of required fields can be found in the subsection Flight Summary of the Flight Plan Section.
 - *Archived* Finalized briefings which were successfully synchronized back to the server get status “archived”

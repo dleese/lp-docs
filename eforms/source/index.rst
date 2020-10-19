@@ -12,12 +12,14 @@ This is a collection of Logipad documentations.
 .. toctree::
    :maxdepth: 2
    :caption: Table of contents
+   :hidden:
    
    _docs/_eBriefing/eBriefing
    _docs/_eForms/lpTeam
    _docs/_lpClients/lpclientinstallation   
    _docs/_eForms/lptools
    _docs/_eForms/eFormCreation
+   _docs/_home/home
    snippets   
    about
    

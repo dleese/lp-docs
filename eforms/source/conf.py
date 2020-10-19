@@ -74,13 +74,13 @@ html_sidebars = {
 latex_engine = 'pdflatex'
 latex_toplevel_sectioning = 'chapter'
 latex_additional_files = [
-                            './DDSTyle.sty',
+                            './_templates/DDSTyle.sty',
                             './_images/logipad-aero-logo-black.png',
                             './_images/DD-logo.png',
                             './_images/DD-stripes.png'
                         ]
 
-f = open('./DDTitle.tex','r+')
+f = open('./_templates/DDTitle.tex','r+')
 DDTITLE = f.read();
 
 latex_elements = {

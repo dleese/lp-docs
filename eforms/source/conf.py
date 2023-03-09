@@ -113,8 +113,8 @@ latex_elements = {
     'sphinxsetup': \
         'hmargin={0.7in,0.7in}, vmargin={1in,1in}, \
         verbatimwithframe=true, \
-        TitleColor={rgb}{0.443,0.160,0.282}, \
-        InnerLinkColor={rgb}{0.443,0.160,0.282}, \
-        OuterLinkColor={rgb}{0.443,0.160,0.282}',
+        TitleColor={rgb}{0.404,0.501,0.560}, \
+        InnerLinkColor={rgb}{0.404,0.501,0.560}, \
+        OuterLinkColor={rgb}{0.404,0.501,0.560}', \
         'tableofcontents':' ',
 }

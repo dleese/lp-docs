@@ -1,7 +1,7 @@
 =========
 eBriefing
 =========
-The *eBriefing*/*EFF* module enables work and collaboration on Electronic Flight Folder (EFF) packages. These packages represent the electronic version of the Flight-briefing documentation. They contain all the flight related documents and data such as OFP, weather, weather charts, NOTAMs in a standardized data structure. 
+*eBriefing*/*EFF* module enables work and collaboration on Electronic Flight Folder (EFF) packages. These packages represent the electronic version of the Flight-briefing documentation. They contain all the flight related documents and data such as OFP, weather, weather charts, NOTAMs in a standardized data structure. 
 EFF packages are always assigned to a particular flight and to a particular crew. Pilots can enter data in specific areas of the flight plan and acquire last-minute updates and revisions.
 In following the structure and the functions of the briefing module are described in detail.
 When selecting the Briefing icon from the navigation tab-bar, Briefing packages assigned to the User’s role are shown.

@@ -1,0 +1,4 @@
+{
+    "restructuredtext.confPath": "${workspaceFolder}/eforms/source",
+    "esbonio.sphinx.confDir": "${workspaceFolder}/eforms/source"
+}

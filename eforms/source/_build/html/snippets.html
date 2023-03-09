@@ -1,0 +1,1358 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Code Snippets &#8212; LP-Docs 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="About Logipad" href="about.html" />
+    <link rel="prev" title="Home" href="_docs/_home/home.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="code-snippets">
+<h1>Code Snippets<a class="headerlink" href="#code-snippets" title="Permalink to this heading">¶</a></h1>
+<p class="linemarker linemarker-5">In this document you will find preconfigured code snippets to make it easier to create new eForms.</p>
+<section id="logipadheader">
+<h2>LogipadHeader<a class="headerlink" href="#logipadheader" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-10">Header with title, logo and version.
+You can change <strong>logipad_aero.png</strong> to the filename of your company logo in the images folder.</p>
+<blockquote>
+<div><p class="linemarker linemarker-15">Snippet: logipadheader</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- START OF HEADER--&gt;</span>&quot;,
+<span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-9&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label Title&quot;</span><span class="nt">&gt;</span>
+            ${FormName}
+        <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-3&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span> <span class="na">align=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;./images/logipad_aero.png&quot;</span> <span class="na">width=</span><span class="s">&quot;200px&quot;</span><span class="nt">&gt;&lt;/img&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span> <span class="na">align=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span>
+                eForm Version 1.2
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+<span class="cm">&lt;!-- END OF HEADER--&gt;</span>
+</pre></div>
+</div>
+<section id="logipadsection">
+<h3>LogipadSection<a class="headerlink" href="#logipadsection" title="Permalink to this heading">¶</a></h3>
+<p class="linemarker linemarker-47">Head and <strong>Content</strong> area of a new section. It can be insert a <strong>Sectionname</strong>.</p>
+<blockquote>
+<div><p class="linemarker linemarker-51">Snippet: logipadsection</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- START Section ${Sectionname} --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;SectionHeader SectionTitle&quot;</span><span class="nt">&gt;</span>
+            ${Sectionname}
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+${Content}
+<span class="cm">&lt;!-- END Section ${Sectionname} --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="logipadinput">
+<h3>LogipadInput<a class="headerlink" href="#logipadinput" title="Permalink to this heading">¶</a></h3>
+<p class="linemarker linemarker-71">Input box with <strong>Labeltext</strong> and field name <strong>Variablename</strong>.
+The width of the field can be set with <strong>width</strong>.</p>
+<blockquote>
+<div><p class="linemarker linemarker-76">Snippet: logipadinput</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadInput --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadInput --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-93">Input where the input is required.</p>
+<blockquote>
+<div><p class="linemarker linemarker-97">Snippet: logipadinputrequired</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadInputRequired --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadInputRequired --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-114">Input to input a three letter code.
+If the logipad keyboard is activated a custom keyboard will be used.</p>
+<blockquote>
+<div><p class="linemarker linemarker-119">Snippet: logipadinput3lc</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadInput3LC --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;three-lc&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadInput3LC --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-136">Input field for input numbers with a numeric keypad.</p>
+<blockquote>
+<div><p class="linemarker linemarker-140">Snippet: logipadinputnumber</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadInputNumber --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;number&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadInputNumber --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="logipadselect">
+<h3>LogipadSelect<a class="headerlink" href="#logipadselect" title="Permalink to this heading">¶</a></h3>
+<p class="linemarker linemarker-160">Select field whose options are filled from the backend.
+With the attribute <strong>data-live-search</strong> the search field in the options can be activated.</p>
+<blockquote>
+<div><p class="linemarker linemarker-165">Snippet: logipadselect1</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadSelect1 --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;selectpicker form-control&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span> <span class="na">data-live-search=</span><span class="s">&quot;true&quot;</span> <span class="na">title=</span><span class="s">&quot;Select...&quot;</span><span class="nt">&gt;&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadSelect1 --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-182">Select field whose options are implemented insinde the form.</p>
+<blockquote>
+<div><p class="linemarker linemarker-186">Snippet: logipadselect2</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadSelect2 --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;selectpicker form-control&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">title=</span><span class="s">&quot;Select ...&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;${Option1}&quot;</span><span class="nt">&gt;</span>${Option1}<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;${Option2}&quot;</span><span class="nt">&gt;</span>${Option2}<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Other&quot;</span><span class="nt">&gt;</span>Other ...<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadSelect2 --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="radio-group">
+<h3>Radio group<a class="headerlink" href="#radio-group" title="Permalink to this heading">¶</a></h3>
+<p class="linemarker linemarker-210">Button radio group with the values yes and no. The values can be changed.</p>
+<blockquote>
+<div><p class="linemarker linemarker-214">Snippet: logipadradio</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadRadio --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;br&gt;&lt;/br&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group btn-group-toggle LogipadRadio&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;buttons&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary radio-button&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">value=</span><span class="s">&quot;Yes&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+                Yes
+            <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary radio-button&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">value=</span><span class="s">&quot;No&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+                No
+            <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadRadio --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-241">Radio group with small radio buttons inline.</p>
+<blockquote>
+<div><p class="linemarker linemarker-245">Snippet: logipadsmallradio</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadSmallRadio --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;br&gt;&lt;/br&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-check form-check-inline&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-check-input&quot;</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">value=</span><span class="s">&quot;${Value1}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;form-check-label&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;cr-icon glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+                ${Value1}
+            <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-check form-check-inline&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-check-input&quot;</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">value=</span><span class="s">&quot;${Value2}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;form-check-label&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;cr-icon glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+                ${Value2}
+            <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-check form-check-inline&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-check-input&quot;</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">value=</span><span class="s">&quot;${Value3}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;form-check-label&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;cr-icon glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+                ${Value3}
+            <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadSmallRadio --&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="checkboxes">
+<h2>Checkboxes<a class="headerlink" href="#checkboxes" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-288">Checkbox with a label (<strong>Value</strong>) on the right side.</p>
+<blockquote>
+<div><p class="linemarker linemarker-292">Snippet: logipadcheckbox1</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start Logipadcheckbox1 --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-check&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-check-input&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">value=</span><span class="s">&quot;${Value}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;form-check-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;cr-icon glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Value}
+        <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End Logipadcheckbox1 --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-309">Checkbox to open an edit field for not listed opions with the text <strong>Other</strong> on the right side.</p>
+<blockquote>
+<div><p class="linemarker linemarker-313">Snippet: logipadcheckbox1other</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start Logipadcheckbox1other --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;other-col col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-check&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-check-input toggleOther&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;chk${Variablename}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;form-check-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;cr-icon glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            Other
+        <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span> <span class="na">style=</span><span class="s">&quot;padding-left: 20px&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End Logipadcheckbox1other --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-335">Checkbox with a label (<strong>Value</strong>) on the left side.</p>
+<blockquote>
+<div><p class="linemarker linemarker-339">Snippet: logipadcheckbox2</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start Logipadcheckbox2 --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;form-check-label&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;cr-icon glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+                ${Value}
+            <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-2&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-check&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-check-input&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">value=</span><span class="s">&quot;${Value}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End Logipadcheckbox2 --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-362">Checkbox to open an edit field for not listed opions with the text <strong>Other</strong> on the left side.</p>
+<blockquote>
+<div><p class="linemarker linemarker-366">Snippet: logipadcheckbox2other</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start Logipadcheckbox2other --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;other-col col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;form-check-label&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;cr-icon glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+                Other
+            <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span> <span class="na">style=</span><span class="s">&quot;padding-right: 20px&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+                <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-2&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-check&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-check-input toggleOther&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;chk${Variablename}&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End Logipadcheckbox2other --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="datepicker">
+<h2>Datepicker<a class="headerlink" href="#datepicker" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-397">Date picker with label and data field.
+The date needs to have a value because the attribute required is set.</p>
+<blockquote>
+<div><p class="linemarker linemarker-402">Snippet: logipaddatepicker</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadDatepicker --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;date&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control form_date&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadDatepicker --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="timepicker">
+<h2>Timepicker<a class="headerlink" href="#timepicker" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-422">Timepicker with label and data field.
+The time needs to have a value because the attribute required is set.</p>
+<blockquote>
+<div><p class="linemarker linemarker-427">Snippet: logipadtimepicker</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadTimepicker --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;time&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control form_time&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadTimepicker --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="datetimepicker">
+<h2>DateTimepicker<a class="headerlink" href="#datetimepicker" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-447">DateTimepicker with label and data field.
+The date and time needs to have a value because the attribute required is set.</p>
+<blockquote>
+<div><p class="linemarker linemarker-452">Snippet: logipaddatetimepicker</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadDateTimepicker --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;datetime-local&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control form_datetime&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadDateTimepicker --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="periodpicker">
+<h2>Periodpicker<a class="headerlink" href="#periodpicker" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-472">Periodpicker with label and data field.
+The period needs to have a value because the attribute required is set.</p>
+<blockquote>
+<div><p class="linemarker linemarker-477">Snippet: logipadperiodpicker</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadPeriodpicker --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-${width}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ${Labeltext}
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;cdate&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control form_time2&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadPeriodpicker --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="textarea">
+<h2>Textarea<a class="headerlink" href="#textarea" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-497">Input area with with a given number of rows and field name ‘Suggestions’ in template.xml.
+The field will automatically grow if more rows are entered.</p>
+<blockquote>
+<div><p class="linemarker linemarker-502">Snippet: logipadtextarea</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadTextArea --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+                ${Labeltext}
+            <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;textarea</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">rows=</span><span class="s">&quot;${Rows}&quot;</span> <span class="na">cols=</span><span class="s">&quot;90&quot;</span> <span class="na">onkeyup=</span><span class="s">&quot;AutoGrowTextArea(this);&quot;</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadTextArea --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="attach-picture-with-scaling">
+<h2>Attach picture with scaling<a class="headerlink" href="#attach-picture-with-scaling" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-523">Attach picture function with scaling and preview.
+The Select field needs to have the <strong>name</strong>.
+The button needs to have the <strong>name</strong> ‘{picture-name}-button’.
+The label for the filename needs to have the <strong>name</strong> ‘{picture-name}-filename’.
+The preview needs to have the <strong>name</strong> ‘{picture-name}’.</p>
+<blockquote>
+<div><p class="linemarker linemarker-531">Snippet: logipadpicture</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadPicture --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-5&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label d-print-none&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            ATTACHMENTS
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;lp-selectpicker form-control d-print-none selected&quot;</span> <span class="na">name=</span><span class="s">&quot;${SelectName}&quot;</span> <span class="na">onChange=</span><span class="s">&quot;setCompression(this);&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;20&quot;</span> <span class="na">selected=</span><span class="s">&quot;selected&quot;</span><span class="nt">&gt;</span>small size<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;40&quot;</span><span class="nt">&gt;</span>medium size<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;60&quot;</span><span class="nt">&gt;</span>large size<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;80&quot;</span><span class="nt">&gt;</span>original size<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>original quality<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-5&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;card&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 100%&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;embed-responsive embed-responsive-16by9&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;upload-image-preview&quot;</span> <span class="na">src=</span><span class="s">&quot;&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span><span class="nt">&gt;&lt;/img&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-row d-print-none&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-5&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            File Selection
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">name=</span><span class="s">&quot;${Variablename}-button&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;lp-file-browse btn btn-warning form-control&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-file&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control lp-image lp-filename&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span> <span class="na">style=</span><span class="s">&quot;display:none;&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">disabled=</span><span class="s">&quot;Disabled&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename}-filename&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;File not selected&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadPicture --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="navigation-tabs">
+<h2>Navigation Tabs<a class="headerlink" href="#navigation-tabs" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-583">Tab-menu with two tabs default. Any number of tabs can be added.
+The navigation-tabs needs to have a tab-name.</p>
+<blockquote>
+<div><p class="linemarker linemarker-588">Snippet: logipadnavtab</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadNavTabs --&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;nav-link active&quot;</span><span class="nt">&gt;</span>${Tabname1}<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;nav-link&quot;</span><span class="nt">&gt;</span>${Tabname2}<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-content&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">name=</span><span class="s">&quot;${Variablename1}&quot;</span> <span class="na">class=</span><span class="s">&quot;tab-pane fade show active&quot;</span><span class="nt">&gt;</span>
+        Place Content for tab ${Variablename1} here
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">name=</span><span class="s">&quot;${Variablename2}&quot;</span> <span class="na">class=</span><span class="s">&quot;tab-pane fade&quot;</span><span class="nt">&gt;</span>
+        Place Content for tab ${Variablename2} here
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadNavTabs --&gt;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-612">Tab-menu with one tab which can be extended dynamically by a number (<strong>Max</strong>) of tabs.
+<strong>Variablename</strong> specifies the name of the content in the tabs (possibly in plural), <strong>Variablename1</strong> specifies the name of the individual tab.</p>
+<blockquote>
+<div><p class="linemarker linemarker-617">Snippet: logipadnavtabaddedtabs</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadAdddedNavTabs --&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs&quot;</span> <span class="na">role=</span><span class="s">&quot;tablist&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;nav-link active&quot;</span> <span class="na">role=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>${Tabname}<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;nav-link link-add-section&quot;</span><span class="nt">&gt;</span>+ Add<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;nav-link link-delete-section&quot;</span><span class="nt">&gt;</span>- Delete<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-content dynamic-tab&quot;</span> <span class="na">name=</span><span class="s">\&quot;${Variablename}\&quot;</span> <span class="na">max=</span><span class="s">&quot;${Max}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane fade show active&quot;</span> <span class="na">name=</span><span class="s">&quot;${Variablename1}&quot;</span> <span class="na">role=</span><span class="s">&quot;tabpanel&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadAdddedNavTabs --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="table">
+<h2>Table<a class="headerlink" href="#table" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-643">Table with a header and one content row. Any number of table-rows can be added.
+If the table should have no border remove class <strong>table-bordered</strong>.
+To align the label of single column to the left remove the style of the <strong>th</strong>-Tag.</p>
+<blockquote>
+<div><p class="linemarker linemarker-649">Snippet: logipadtable</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadTable --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span> <span class="na">style=</span><span class="s">&quot;height: 20px;&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-bordered&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;thead&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th</span> <span class="na">style=</span><span class="s">&quot;text-align: center;&quot;</span><span class="nt">&gt;</span>${Labeltext1}<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;th</span> <span class="na">style=</span><span class="s">&quot;text-align: center;&quot;</span><span class="nt">&gt;</span>${Labeltext2}<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;th</span> <span class="na">style=</span><span class="s">&quot;text-align: center;&quot;</span><span class="nt">&gt;</span>${Labeltext3}<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/thead&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td&gt;</span>${Content1}<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>${Content2}<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>${Content3}<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- Spacing of 20px to next control --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-12&quot;</span> <span class="na">style=</span><span class="s">&quot;height: 20px;&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadTable --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="table-with-buttons-to-add-and-delete-rows">
+<h2>Table with buttons to add and delete rows<a class="headerlink" href="#table-with-buttons-to-add-and-delete-rows" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-681">Table with a header and a defined number (<strong>addedRows</strong>) of content rows.
+A define number of table-rows can be add and delete (<strong>maxRow</strong>) by using the buttons.
+<strong>VariablenameTable</strong> specifies the name of the content in the table (possibly in plural), <strong>Variablename</strong> specifies the name of the individual table row.</p>
+<blockquote>
+<div><p class="linemarker linemarker-687">Snippet: logipadtableaddedrows</p>
+</div></blockquote>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Start LogipadTableAddedRows --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table&quot;</span> <span class="na">name=</span><span class="s">&quot;${VariablenameTable}&quot;</span> <span class="na">maxRow=</span><span class="s">&quot;${MaxRows}&quot;</span> <span class="na">addedRows=</span><span class="s">&quot;${AddedRows}&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;thead&gt;</span>
+            <span class="nt">&lt;th&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> ${Labeltext1}
+            <span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> ${Labeltext2}
+            <span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> ${Labeltext3}
+            <span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/thead&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr</span> <span class="na">name=</span><span class="s">&quot;${Variablename}&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;td&gt;</span>
+                    ${Content1}
+                <span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>
+                    ${Content2}
+                <span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>
+                    ${Content3}
+                <span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-light btn-sm lp-add-table-row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-plus&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Add Row
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-light btn-sm lp-del-table-row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-minus&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Del Row
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cm">&lt;!-- End LogipadTableAddedRows --&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="definitions-for-xsl-json">
+<h2>Definitions for xsl.json<a class="headerlink" href="#definitions-for-xsl-json" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-733">Please copy the following code to the xsl user snippets to enable th snippeds inside the editor to enable it.</p>
+<blockquote>
+<div><p class="linemarker linemarker-737">To access the file please use the following menu steps inside Microsoft Visual Studio Code
+File -&gt; Preferences -&gt; User Snippets
+Here select XSL as language and paste the content into the file.
+If you are using a MAC the import menu is located under
+Code -&gt; Preferences -&gt; User Snippets</p>
+</div></blockquote>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadHeader&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadheader&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- START OF HEADER--&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;col-sm-9\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label Title\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${FormName}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;col-sm-3\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;div class=\&quot;col-sm-12\&quot; align=\&quot;right\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;img src=\&quot;./images/logipad_aero.png\&quot; width=\&quot;200px\&quot;&gt;&lt;/img&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;div class=\&quot;col-sm-12\&quot; align=\&quot;right\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                eForm Version 1.2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- END OF HEADER--&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a form header section&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadSection&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadsection&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- START Section ${Sectionname} --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;col-sm-12\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;SectionHeader SectionTitle\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Sectionname}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;${Content}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- END Section ${Sectionname} --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a section header.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadInput&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadinput&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadInput --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;text\&quot; class=\&quot;form-control\&quot; name=\&quot;${Variablename}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadInput --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a input field&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadInputRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadinputrequired&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadInputRequired --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;text\&quot; class=\&quot;form-control\&quot; name=\&quot;${Variablename}\&quot; required=\&quot;required\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadInputRequired --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a required input field&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadInput3LC&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadinput3lc&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadInput3LC --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;three-lc\&quot; class=\&quot;form-control\&quot; name=\&quot;${Variablename}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadInput3LC --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a input field for 3lc&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadInputNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadinputnumber&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadInputNumber --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;number\&quot; class=\&quot;form-control\&quot; name=\&quot;${Variablename}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadInputNumber --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a input field for numbers&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadSelect1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadselect1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadSelect1 --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;select class=\&quot;selectpicker form-control\&quot; name=\&quot;${Variablename}\&quot; required=\&quot;required\&quot; data-live-search=\&quot;true\&quot; title=\&quot;Select...\&quot;&gt;&lt;/select&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadSelect1 --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a select. Prefilled form backend&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadSelect2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadselect2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadSelect2 --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;select class=\&quot;selectpicker form-control\&quot; name=\&quot;${Variablename}\&quot; title=\&quot;Select ...\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;option value=\&quot;${Option1}\&quot;&gt;${Option1}&lt;/option&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;option value=\&quot;${Option2}\&quot;&gt;${Option2}&lt;/option&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;option value=\&quot;Other\&quot;&gt;Other ...&lt;/option&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/select&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadSelect2 --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a select.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadRadio&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadradio&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadRadio --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;br&gt;&lt;/br&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;btn-group btn-group-toggle LogipadRadio\&quot; data-toggle=\&quot;buttons\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;label class=\&quot;btn btn-primary radio-button\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;input type=\&quot;radio\&quot; name=\&quot;${Variablename}\&quot; value=\&quot;Yes\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                Yes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;label class=\&quot;btn btn-primary radio-button\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;input type=\&quot;radio\&quot; name=\&quot;${Variablename}\&quot; value=\&quot;No\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                No&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadRadio --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a radio group.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadSmallRadio&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadsmallradio&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadSmallRadio --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;br&gt;&lt;/br&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;form-check form-check-inline\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;input class=\&quot;form-check-input\&quot; type=\&quot;radio\&quot; name=\&quot;${Variablename}\&quot; value=\&quot;${Value1}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;label class=\&quot;form-check-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;i class=\&quot;cr-icon glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                ${Value1}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;form-check form-check-inline\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;input class=\&quot;form-check-input\&quot; type=\&quot;radio\&quot; name=\&quot;${Variablename}\&quot; value=\&quot;${Value2}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;label class=\&quot;form-check-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;i class=\&quot;cr-icon glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                ${Value2}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;form-check form-check-inline\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;input class=\&quot;form-check-input\&quot; type=\&quot;radio\&quot; name=\&quot;${Variablename}\&quot; value=\&quot;${Value3}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;label class=\&quot;form-check-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;i class=\&quot;cr-icon glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                ${Value3}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadSmallRadio --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a radio group with three small buttons.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadCheckbox1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadcheckbox1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start Logipadcheckbox1 --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-check\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input class=\&quot;form-check-input\&quot; type=\&quot;checkbox\&quot; name=\&quot;${Variablename}\&quot; value=\&quot;${Value}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;form-check-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;cr-icon glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Value}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End Logipadcheckbox1 --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a checkbox with a label. checbox on the left side of the text.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadCheckbox1other&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadcheckbox1other&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start Logipadcheckbox1other --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;other-col col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-check\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input class=\&quot;form-check-input toggleOther\&quot; type=\&quot;checkbox\&quot; name=\&quot;chk${Variablename}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;form-check-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;cr-icon glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            Other&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;collapse\&quot; style=\&quot;padding-left: 20px\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;text\&quot; class=\&quot;form-control\&quot; name=\&quot;${Variablename}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End Logipadcheckbox1other --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a checkbox with a label and edit box. checbox on the left side of the text.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadCheckbox2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadcheckbox2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start Logipadcheckbox2 --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;col-sm-10\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;label class=\&quot;form-check-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;i class=\&quot;cr-icon glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                ${Value}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;col-sm-2\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;div class=\&quot;form-check\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;input class=\&quot;form-check-input\&quot; type=\&quot;checkbox\&quot; name=\&quot;${Variablename}\&quot; value=\&quot;${Value}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End Logipadcheckbox2 --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a checkbox with a label. checbox on the right side of the text.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadCheckbox2other&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadcheckbox2other&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start Logipadcheckbox2other --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;other-col col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;col-sm-10\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;label class=\&quot;form-check-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;i class=\&quot;cr-icon glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                Other&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;div class=\&quot;collapse\&quot; style=\&quot;padding-right: 20px\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;input type=\&quot;text\&quot; class=\&quot;form-control\&quot; name=\&quot;${Variablename}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;col-sm-2\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;div class=\&quot;form-check\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;input class=\&quot;form-check-input toggleOther\&quot; type=\&quot;checkbox\&quot; name=\&quot;chk${Variablename}\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End Logipadcheckbox2other --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a checkbox with a label and edit box. checbox on the right side of the text.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadDatepicker&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipaddatepicker&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadDatepicker --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;date\&quot; class=\&quot;form-control form_date\&quot; name=\&quot;${Variablename}\&quot; required=\&quot;required\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadDatepicker --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a date picker.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadTimepicker&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadtimepicker&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadTimepicker --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;time\&quot; class=\&quot;form-control form_time\&quot; name=\&quot;${Variablename}\&quot; required=\&quot;required\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadTimepicker --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a time picker.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadDateTimepicker&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipaddatetimepicker&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadDateTimepicker --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;datetime-local\&quot; class=\&quot;form-control form_datetime\&quot; name=\&quot;${Variablename}\&quot; required=\&quot;required\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadDateTimepicker --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a datetime picker.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadPeriodpicker&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadperiodpicker&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadPeriodpicker --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-${width}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;input type=\&quot;cdate\&quot; class=\&quot;form-control form_time2\&quot; name=\&quot;${Variablename}\&quot; required=\&quot;required\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadPeriodpicker --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a period picker.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadTextArea&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadtextarea&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadTextArea --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;col-sm-12\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;form-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                ${Labeltext}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;textarea type=\&quot;text\&quot; name=\&quot;${Variablename}\&quot; class=\&quot;form-control\&quot; rows=\&quot;${Rows}\&quot; cols=\&quot;90\&quot; onkeyup=\&quot;AutoGrowTextArea(this);\&quot;&gt;&lt;/textarea&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadTextArea --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a date picker.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadPicture&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadpicture&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadPicture --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;col-sm-5\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label d-print-none\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            ATTACHMENTS&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;select class=\&quot;lp-selectpicker form-control d-print-none selected\&quot; name=\&quot;${SelectName}\&quot; onChange=\&quot;setCompression(this);\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;option value=\&quot;20\&quot; selected=\&quot;selected\&quot;&gt;small size&lt;/option&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;option value=\&quot;40\&quot;&gt;medium size&lt;/option&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;option value=\&quot;60\&quot;&gt;large size&lt;/option&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;option value=\&quot;80\&quot;&gt;original size&lt;/option&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;option value=\&quot;100\&quot;&gt;original quality&lt;/option&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/select&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;col-sm-5\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;card\&quot; style=\&quot;width: 100%\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;div class=\&quot;embed-responsive embed-responsive-16by9\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;img class=\&quot;upload-image-preview\&quot; src=\&quot;\&quot; name=\&quot;${Variablename}\&quot;&gt;&lt;/img&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-row d-print-none\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;col-sm-5\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;label class=\&quot;control-label\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            File Selection&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/label&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;input-group\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;span class=\&quot;input-group-btn\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;button name=\&quot;${Variablename}-button\&quot; type=\&quot;button\&quot; class=\&quot;lp-file-browse btn btn-warning form-control\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                    &lt;span class=\&quot;glyphicon glyphicon-file\&quot;&gt;&lt;/span&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;/button&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/span&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;input type=\&quot;file\&quot; class=\&quot;form-control lp-image lp-filename\&quot; name=\&quot;${Variablename}\&quot; style=\&quot;display:none;\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;input type=\&quot;text\&quot; disabled=\&quot;Disabled\&quot; name=\&quot;${Variablename}-filename\&quot; placeholder=\&quot;File not selected\&quot; class=\&quot;form-control\&quot;&gt;&lt;/input&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadPicture --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attach a picture.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadNavTab&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadnavtab&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadNavTabs --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;ul class=\&quot;nav nav-tabs\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;li class=\&quot;nav-item\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;a class=\&quot;nav-link active\&quot;&gt;${Tabname1}&lt;/a&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/li&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;li class=\&quot;nav-item\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;a class=\&quot;nav-link\&quot;&gt;${Tabname2}&lt;/a&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/li&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/ul&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;tab-content\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div name=\&quot;${Variablename1}\&quot; class=\&quot;tab-pane fade show active\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        Place Content for tab ${Variablename1} here&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div name=\&quot;${Variablename2}\&quot; class=\&quot;tab-pane fade\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        Place Content for tab ${Variablename2} here&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadNavTabs --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a navigation tab.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadNavTabAddedTabs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadnavtabaddedtabs&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadAdddedNavTabs --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;ul class=\&quot;nav nav-tabs\&quot; role=\&quot;tablist\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;li class=\&quot;nav-item\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;a class=\&quot;nav-link active\&quot; role=\&quot;tab\&quot;&gt;${Tabname}&lt;/a&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/li&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;li class=\&quot;nav-item\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;a class=\&quot;nav-link link-add-section\&quot;&gt;+ Add&lt;/a&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/li&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;li class=\&quot;nav-item\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;a class=\&quot;nav-link link-delete-section\&quot;&gt;- Delete&lt;/a&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/li&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/ul&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;tab-content dynamic-tab\&quot; name=\&quot;${Variablename}\&quot; max=\&quot;${Max}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;tab-pane fade show active\&quot; name=\&quot;${Variablename1}\&quot; role=\&quot;tabpanel\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadAdddedNavTabs --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a navigation tab  with buttons to add a new tab.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadTable&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadtable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadTable --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-12\&quot; style=\&quot;height: 20px;\&quot;&gt;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-12\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;table class=\&quot;table table-bordered\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;thead&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;tr&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;th style=\&quot;text-align: center;\&quot;&gt;${Labeltext1}&lt;/th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;th style=\&quot;text-align: center;\&quot;&gt;${Labeltext2}&lt;/th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;th style=\&quot;text-align: center;\&quot;&gt;${Labeltext3}&lt;/th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/tr&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/thead&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;tbody&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;tr&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;td&gt;${Content1}&lt;/td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;td&gt;${Content2}&lt;/td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;td&gt;${Content3}&lt;/td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/tr&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/tbody&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/table&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Spacing of 20px to next control --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-xs-12\&quot; style=\&quot;height: 20px;\&quot;&gt;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadTable --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a bordered table.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadTableAddedRows&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadtableaddedrows&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadTableAddedRows --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-12\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;table class=\&quot;table\&quot; name=\&quot;${VariablenameTable}\&quot; maxRow=\&quot;${MaxRows}\&quot; StartValue=\&quot;${StartValue}\&quot; addedRows=\&quot;${AddedRows}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;thead&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt; ${Labeltext1}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt; ${Labeltext2}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;i class=\&quot;glyphicon\&quot;&gt;&lt;/i&gt; ${Labeltext3}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/th&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/thead&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;tbody&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;tr name=\&quot;${Variablename}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                    ${Content1}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;/td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                    ${Content2}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;/td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                    ${Content3}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;                &lt;/td&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;/tr&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/tbody&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/table&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;button type=\&quot;button\&quot; class=\&quot;btn btn-light btn-sm lp-add-table-row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;span class=\&quot;glyphicon glyphicon-plus\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;/span&gt; Add Row&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/button&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;button type=\&quot;button\&quot; class=\&quot;btn btn-light btn-sm lp-del-table-row\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;span class=\&quot;glyphicon glyphicon-minus\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;/span&gt; Del Row&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/button&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadTableAddedRows --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert a table with buttons to add and delete rows.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadDraw&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipaddraw&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadDraw --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-12\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;signature-pad center-block\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;signature-pad--body\&quot; width=\&quot;${ImageWidth}\&quot; height=\&quot;${ImageHeight}\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;img src=\&quot;images/${Imagename}\&quot; width=\&quot;${ImageWidth}\&quot; height=\&quot;${ImageHeight}\&quot; alt=\&quot;\&quot;&gt;&lt;/img&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;canvas name=\&quot;${Variablename}\&quot; class=\&quot;sp-canvas\&quot;&gt;&lt;/canvas&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;signature-pad--footer btn-toolbar\&quot; role=\&quot;toolbar\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;button type=\&quot;button\&quot; class=\&quot;btn btn-secondary\&quot; data-action=\&quot;clear\&quot;&gt;Clear&lt;/button&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;button type=\&quot;button\&quot; class=\&quot;btn btn-primary\&quot; data-action=\&quot;save\&quot;&gt;Save changes&lt;/button&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;p&gt;&lt;/p&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadDraw --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert an area with an image that can be painted on.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LogipadSignature&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logipadsignature&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- Start LogipadSignature --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;div class=\&quot;col-sm-12\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;div class=\&quot;signature-pad\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;signature-pad--body\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;canvas name=\&quot;${Variablename}\&quot; class=\&quot;sp-canvas\&quot;&gt;&lt;/canvas&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;div class=\&quot;signature-pad--footer btn-toolbar\&quot; role=\&quot;toolbar\&quot;&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;button type=\&quot;button\&quot; class=\&quot;btn btn-secondary\&quot; data-action=\&quot;clear\&quot;&gt;Clear&lt;/button&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;            &lt;button type=\&quot;button\&quot; class=\&quot;btn btn-primary\&quot; data-action=\&quot;save\&quot;&gt;Save changes&lt;/button&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;        &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;    &lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;&lt;!-- End LogipadSignature --&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert an area where a signature can be placed.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logipad-aero-logo-black.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="_docs/_eBriefing/eBriefing.html">eBriefing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/_eForms/lpTeam.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/_lpClients/lpclientinstallation.html">Logipad Client Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/_eForms/lptools.html">Logipad Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/_eForms/eFormCreation.html">General coding information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/_eForms/eFormCreation.html#bootstrap-grids">Bootstrap Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/_eForms/eFormCreation.html#bootstrap-glyphicons">Bootstrap Glyphicons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/_home/home.html">Home</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Code Snippets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#logipadheader">LogipadHeader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checkboxes">Checkboxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datepicker">Datepicker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timepicker">Timepicker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datetimepicker">DateTimepicker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#periodpicker">Periodpicker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textarea">Textarea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attach-picture-with-scaling">Attach picture with scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigation-tabs">Navigation Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table">Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-with-buttons-to-add-and-delete-rows">Table with buttons to add and delete rows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definitions-for-xsl-json">Definitions for xsl.json</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Logipad</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, DextraData GmbH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/snippets.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

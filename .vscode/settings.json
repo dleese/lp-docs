@@ -1,5 +1,6 @@
 {
     "restructuredtext.confPath": "${workspaceFolder}/eforms/source",
     "esbonio.sphinx.confDir": "${workspaceFolder}/eforms/source",
-    "gitflow.path": "/opt/homebrew/Cellar/git-flow/0.4.1_1/bin/"
+    "gitflow.path": "/opt/homebrew/Cellar/git-flow/0.4.1_1/bin/",
+    "screencastMode.keyboardShortcutsFormat": "commandAndKeys"
 }

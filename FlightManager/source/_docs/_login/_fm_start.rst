@@ -1,12 +1,18 @@
 Login
 =====
 
-To login to Logipad's *Flightmanager* Window you need to visit the following URL.
+To log in to Logipad's *Flightmanager* Window you need to visit the following URL.
 
-.. _a link: http://flightmanager.demo.prod.logipad.net/
+http://flightmanager.demo.prod.logipad.net/
+
+You can use Logipad's internal authentication mecahnism by using the **login** button or 3rd party authentication provider like Microsoft. 
 
 .. figure::  ../../_images/fm_login.png
    :scale: 30
    :align: left
 
-   login Screen
+   Login Screen
+
+Local Login
+-----------
+The local Login

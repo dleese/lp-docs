@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Logipad Service Portal'
+project = 'LP-Docs'
 copyright = '2020, DextraData GmbH'
 author = 'Dirk Leese'
 
@@ -50,9 +50,12 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
-html_theme_options = {
 
+html_theme = 'alabaster'
+
+html_theme_options = {
+    #"rightsidebar": "true",
+    #"relbarbgcolor": "black"
 }
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -62,9 +65,8 @@ html_logo = './_images/logipad-aero-logo-black.png'
 
 html_sidebars = {
     '**': [
-        
+        'searchbox.html',
         'navigation.html',
-       
     ]
 }
 
@@ -74,7 +76,7 @@ html_sidebars = {
 latex_engine = 'pdflatex'
 latex_toplevel_sectioning = 'chapter'
 latex_additional_files = [
-                            './_templates/DDStyle.sty',
+                            './_templates/DDSTyle.sty',
                             './_images/logipad-aero-logo-black.png',
                             './_images/DD-logo.png',
                             './_images/DD-stripes.png'
@@ -86,6 +88,7 @@ DDTITLE = f.read();
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
+    'extraclassoptions': 'openany',
     'papersize': 'a4paper',
     'releasename':" ",
     # Sonny, Lenny, Glenn, Conny, Rejne, Bjarne and Bjornstrup
@@ -109,11 +112,11 @@ latex_elements = {
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
-    'sphinxsetup': \
+        'sphinxsetup': \
         'hmargin={0.7in,0.7in}, vmargin={1in,1in}, \
         verbatimwithframe=true, \
-        TitleColor={rgb}{0.443,0.160,0.282}, \
-        InnerLinkColor={rgb}{0.443,0.160,0.282}, \
-        OuterLinkColor={rgb}{0.443,0.160,0.282}',
+        TitleColor={rgb}{0.404,0.501,0.560}, \
+        InnerLinkColor={rgb}{0.404,0.501,0.560}, \
+        OuterLinkColor={rgb}{0.404,0.501,0.560}', \
         'tableofcontents':' ',
 }

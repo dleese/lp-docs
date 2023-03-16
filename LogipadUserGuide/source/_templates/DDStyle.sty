@@ -1,11 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{DDStyle}[2020/05/15 DDStyle Package]
 
-
 \RequirePackage{lmodern}
 
 \definecolor{DDRed}{rgb}{0.443,0.160,0.282}
 \definecolor{DDDarkRed}{rgb}{0.176,0.113,0.152} %%% {45,29,39}
+\definecolor{DD2ndGenGreen}{rgb}{0.486,0.756,0.760} %%% {124,193,194}
+\definecolor{DD2ndGenDarkGreen}{rgb}{0.404,0.501,0.560} %%% {124,193,194}
 
 %% 'roman' option
 %\DeclareOption{roman}{
@@ -55,9 +56,9 @@
         \usepackage{xcolor}
         
         \usepackage{sectsty}
-        \chapterfont{\color{DDDarkRed}}  % sets colour of chapters
-        \sectionfont{\color{DDRed}}  % sets colour of sections
-
+        \chapterfont{\color{DD2ndGenDarkGreen}}  % sets colour of chapters
+        \sectionfont{\color{DD2ndGenGreen}}  % sets colour of sections
+        \subsectionfont{\color{DD2ndGenGreen}}
         %% spacing between line
         \usepackage{setspace}
         \onehalfspacing

@@ -11,7 +11,7 @@ Welcome to Logipad Flight Manager
    :caption: Contents:
 
 
-   _docs/_login/_fm_start
+   _docs/_login/login
 
 Indices and tables
 ==================

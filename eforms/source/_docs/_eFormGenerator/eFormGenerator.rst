@@ -228,13 +228,92 @@ Further rows for the section are created in the properties of the section.
 
 
 
+Input Controls
+--------------
+
+Date Picker
+^^^^^^^^^
+
+  .. figure::  ../../_images/Logipad-efG_FormTime.png
+   :scale: 75
+
+   .. PLATZHALTER ..
 
 
 
+Select Field
+^^^^^^^^^^^^
+
+  .. figure::  ../../_images/Logipad-efG_FormSelect.png
+   :scale: 50
+
+   Overview about the Select Field
+1.  General Settings, like "Date Picker"
+2.  Detailed informations about the Informations at the Select field, see section below.
+3.  Checkbox if you want to use Variables
+4.  Checkbox for using Live Search
+5.  Checkbox for individual Addable Options by User
+6.  Checkbox to activate the "Variables from Backend"
+7.  Control-Field to Remove this Widget
 
 
+  .. figure::  ../../_images/Logipad-efG_FormSelect2.png
+   :scale: 50
+
+   Detail Info about the Select Fields
+
+1. Click the **+** Button to add a new Option
+2. Individual Name for "Option 1", you can change this for the appereance at the eForm
+3. Option Value shows the Name of the Field, wich is shown at the Database/Backend
+4. You can delete the Value Field, if you want to use the Individual Name " (2) " for the Field
 
 
+Input Field
+^^^^^^^^^^^
+
+  .. figure::  ../../_images/Logipad-efG_FormInput.png
+   :scale: 50
+
+   Overview about the Input Field
+
+1. General Settings, like "Date Picker"
+2. Choose the Type of the Field. To Use Calculations, you had to choose "Number" or "Decimal". Three-lc = Three Letter Code for e.G. Initials
+3. Here you can insert an Regular Expression for the expectation of the inserted Values. "See: Validation Regular Expression"
+4. At the Placeholder, you can insert an Example for how it has to look like
+
+Regular Expression
+''''''
+
+The Regular Expression field gives the possibility to restrict the field so that data can be entered only in a certain format.
+
+For example, two letters from A-Z followed by a hyphen, then again two letters from A-Z are expected. Now a space follows and now 1-4 digits between 0 and 9 are expected.
+
+.. parsed-literal::
+  [A-Z]{1,2}[-][A-Z]{1,2}[ ][0-9]{1,4}
+
+Radio Buttons
+^^^^^^^^^^^^^
+
+You have two Types of Radio Buttons available.
+* The Small Radio Buttons
+* The Normal Radio Buttons
+
+The Small Radio Buttons shows the Radio Buttons and the text next to them.
+At the Normal Radio Buttons, you have the Text inside of the Button
+
+.. figure::  ../../_images/Logipad-efG_FormRadio1.png
+   :scale: 75
+
+   Shows the difference between **Radio** and **Small Radio** Buttons
+
+.. figure::  ../../_images/Logipad-efG_FormRadio.png
+   :scale: 50
+   :align: center
+
+   Settings for the Radio Buttons
+
+1. Add a new Button selection
+2. Enter the Value for the shown Radio Buttons
 
 
 

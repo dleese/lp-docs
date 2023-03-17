@@ -291,7 +291,29 @@ For example, two letters from A-Z followed by a hyphen, then again two letters f
 .. parsed-literal::
   [A-Z]{1,2}[-][A-Z]{1,2}[ ][0-9]{1,4}
 
+Radio Buttons
+^^^^^^^^^^^^^
 
+You have two Types of Radio Buttons available.
+* The Small Radio Buttons
+* The Normal Radio Buttons
+
+The Small Radio Buttons shows the Radio Buttons and the text next to them.
+At the Normal Radio Buttons, you have the Text inside of the Button
+
+.. figure::  ../../_images/Logipad-efG_FormRadio1.png
+   :scale: 75
+
+   Shows the difference between **Radio** and **Small Radio** Buttons
+
+.. figure::  ../../_images/Logipad-efG_FormRadio.png
+   :scale: 50
+   :align: center
+
+   Settings for the Radio Buttons
+
+1. Add a new Button selection
+2. Enter the Value for the shown Radio Buttons
 
 
 
